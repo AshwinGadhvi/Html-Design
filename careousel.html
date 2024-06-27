@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+        }
+        img{
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider"><img src="image/background.jpg" alt="no"><img src="image/background2.jpg" alt="no"><img src="image/bg-repeat.jpg" alt="no"></div>
+    <script>
+        var slider = document.getElementById("slider");
+        var slides = document.getElementsByTagName("img");
+        var count = slides.length;
+        let id=0;
+        function show(){
+            for(let i=0;i<count;i++)
+            {
+                slides[i].style.display = "none";
+            }
+            id++;
+            while(id>count){
+                id=1;
+            }
+            slides[id-1].style.display="block";
+            setTimeout(show,2000);
+        }
+        show();
+    </script>
+</body>
+</html>

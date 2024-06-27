@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #F8EDE3;
+            border: 1px solid #DFD3C3;
+        }
+        header{
+            width: 100%;
+            height: 80px;
+            background-color: #85586F;
+            border: 1px solid #DFD3C3;
+            color: #DFD3C3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu{
+            display: block;
+            width: 100%;
+            height: 60px;
+        }
+        .menuitem{
+            display: inline-block;
+            width: 33.33%;
+            height: 100px;
+            background-color: #D0B8A8;
+            border: 1px solid #DFD3C3;
+            vertical-align: top;
+        }
+        .menuitem h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .menuitem a{
+            color: #85586F;
+            text-decoration: none;
+        }
+        .content{
+            display: inline-block;
+            width: 100%;
+            border: none;
+            padding: 10px;
+        }
+        .text p{
+            color: #85586F;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .img{
+            width: 43%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+        .img img{
+            width: 100%;
+            height: 520px;
+        }
+        .text{
+            display: inline-block;
+            width: 45%;
+            vertical-align: top;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Machine Learning</h1>
+    </header>
+    <div class="menu">
+        <div class="menuitem">
+            <h1><a href="practical7_1.html">Home</a></h1>
+        </div><div class="menuitem">
+            <h1><a href="practical7_2.html"><u> About</u></a></h1>
+        </div><div class="menuitem">
+            <h1><a href="practical7_3.html">Types</a></h1>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="content">
+        <div class="img">
+            <img src="image/ml3.png" alt="no">
+        </div>
+        <div class="text">
+            <p style="width: 700px;text-align: justify;">
+                Gather the data. Decide what information you will study and how you will collect it. These samples will be used to train and test your model. There are two major types of information sources. If you go to resources such as forums or newspapers, then you are collecting external data. Internal data is what every person or company generates every day: emails, reports, chats, etc. Both internal and external resources can be valuable for text mining.
+            </p>
+        <br>
+        <p style="width: 700px;text-align: justify;">
+            Prepare the data. Unstructured data needs to be prepared, or preprocessed. Otherwise, the program won’t understand it. In our blog, we have already talked about different strategies for data preprocessing.
+        </p>
+        <br>
+        <p style="width: 700px;text-align: justify;">
+            Apply a machine learning algorithm for text analysis. You can write your algorithm from scratch or use a library. Pay attention to NLTK, TextBlob, and Stanford’s CoreNLP if you are looking for something easily accessible for your study and research.        </p>
+        <br>
+        <p style="width: 700px;text-align: justify;">
+            By removing affixes from the word, you get the stem, ‘clean’ form of the word. Google uses stemming for indexing the requests. Instead of storing all the forms of the word, the lexicon is reduced to stems. The process becomes much faster but also less accurate than lemmatization. For instance, the stem or ‘Buying’ is simply ‘buy’.        </p>
+    </div>
+    </div>
+</body>
+</html>

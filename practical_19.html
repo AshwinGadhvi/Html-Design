@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<body>
+    <center>
+        <h1>Practical 19</h1>
+    </center>
+    <form id="myForm">
+        <center>
+
+            Name:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" name="name">
+            <br> Email:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="email" name="email">
+            <br> Password:
+            <input type="password" id="password" name="password">
+            <br>
+            <br>
+
+            <input type="submit" value="Submit">
+        </center>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $('#myForm').submit(function() {
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var password = $('#password').val();
+                var error = '';
+
+                if (name == '') {
+                    error += 'Name is required.\n';
+                }
+
+                if (email == '') {
+                    error += 'Email is required.\n';
+                } else {
+                    var pattern = /^\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b$/;
+                    if (!pattern.test(email)) {
+                        error += 'Invalid email format.\n';
+                    }
+                }
+
+                if (password == '') {
+                    error += 'Password is required.\n';
+                }
+
+                if (error != '') {
+                    alert(error);
+                    return false;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

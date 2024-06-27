@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area{
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+            overflow: scroll;
+            display: inline-block;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".area").mouseenter(function(){
+                $(".area").append("<h5>MouseEntered in The Div</h5>");
+                $(".area").css("background-color","red");
+            });
+            $(".area").mouseleave(function(){
+                $(".area").append("<h5>MouseLeaved from The Div</h5>");
+                $(".area").css("background-color","yellow");
+            });
+            $(".area").mousedown(function(){
+                $(".area").append("<h5>MouseDowned in The Div</h5>");
+                $(".area").css("background-color","blue");
+            });
+            $(".area").mouseup(function(){
+                $(".area").append("<h5>MouseUp From The Div</h5>");
+                $(".area").css("background-color","lightblue");
+
+            });
+            $(".area").mouseout(function(){
+                $(".area").append("<h5>MouseOut From The Div</h5>");
+                $(".area").css("background-color","skyblue");
+            });
+            // $(".area").mousemove(function(){
+            //     $(".area").append("<h5>MouseMoved in The Div</h5>");
+            //     $(".area").css("background-color","purple");
+            // });
+            // $(".area").mouseover(function(){
+            //     $(".area").append("<h5>MouseOver in The Div</h5>");
+            //     $(".area").css("background-color","white");
+            // });
+            $("input").sc(function(){
+                $("#n1").css("background-color","blue");
+                $("span").text("key beind downed");
+            });
+            $("input").keyup(function(){
+                $("#n1").css("background-color","white");
+                $("span").text("key beind up");
+            });
+            $("input").keypress(function(){
+                $("#n1").css("background-color","yellow");
+                $("span").text("key beind pressed");
+            });
+        });
+    </script>
+</head>
+<body>
+    <center><h2>Mouse Event Ans KeyEvent</h2></center>
+    <div class="area">
+
+    </div>
+    <label style="vertical-align: top;margin-left: 40px;">Enter Text</label>
+    <input type="text" name="name" id="n1" style="vertical-align: top;outline: none;">
+    <span style="vertical-align: top;outline: none;"></span>
+</body>
+</html>

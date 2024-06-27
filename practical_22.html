@@ -1,0 +1,23 @@
+
+<html>
+
+<head>
+    <title>Prac 22</title>
+</head>
+
+<body>
+    <img id="img1" src="image/background.jpg" width="300px" height="300px">
+    <img id="img2" src="image/background2.jpg" width="300px" height="300px">
+    <input type="submit" onclick="swapImages()" value="Change Image">
+    <script>
+        function swapImages() {
+            var img1 = document.getElementById("img1");
+            var img2 = document.getElementById("img2");
+            var temp = img1.src;
+            img1.src = img2.src;
+            img2.src = temp;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <center> <h1> This Example Of DOM</h1></center>
+    <center>
+
+        <p class="op1">This is para one</p>
+        <p class="op1">This is Para Two</p>
+        
+    <p id="op"></p>
+    <p id="op2"></p>
+    </center>
+    <script>
+        const a = document.getElementsByTagName("p");
+        document.getElementById("op").innerHTML = "This is example of getElementByTagName:" + a[0].innerHTML;
+        
+        const x = document.querySelectorAll("p.op1");
+        document.getElementById("op2").innerHTML = "This is example of querySelectorAll :" + x[1].innerHTML;
+
+        document.getElementById("op").style.background = "gold";
+        document.getElementById("op2").style.background = "silver";
+        var c = document.getElementsByClassName("op1");
+        for (var i = 0; i < c.length; i++) {
+            c[i].style.background = "pink";
+        }
+    </script>
+</body>
+</html>

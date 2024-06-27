@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pratical-17</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <center>
+
+        <h1>Registration Form</h1>
+        <form id="form1" method="GET">
+        Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="name" name="name"><br><br> Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="email" id="email" name="email"><br><br> Password:
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit" id="submitBtn">Register</button>
+    </form>
+</center>
+
+    <div id="message"></div>
+
+    <script>
+        $("#form1").submit(function(event) {
+            event.preventDefault();
+
+
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var password = $("#password").val();
+
+            if (name == "" || email == "" || password == "") {
+                $("#message").html("Please fill out all fields.");
+            } else {
+
+                $.ajax({
+                    url: "practical_17_1.html",
+                    type: "GET",
+                    data: {
+                        name: name,
+                        email: email,
+                        password: password
+                    },
+                    success: function(response) {
+                        $("#message").html(response);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

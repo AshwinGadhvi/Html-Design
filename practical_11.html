@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-top: 90px;
+            width: 30%;
+            height: 650px;
+            border: 1px solid black;
+            background-color: #eee;
+        }
+        #form{
+            background-color: white;
+            padding: 10px;
+            justify-content: left;
+            width: 90%;
+            box-shadow: 1px 1px 2px gray;
+        }
+        input[type=text]
+        {
+            margin: 20px 0px;
+            width: 100%;
+            height: 40px;
+            outline: none;
+        }
+        input[type=email]
+        {
+            margin:20px 0px;
+            width: 100%;
+            height: 40px;
+            outline: none;
+        }
+        input[type=password]
+        {
+            margin: 20px 0px;
+            width: 100%;
+            height: 40px;
+            outline: none;
+        }
+        input[type=button]{
+            width: 100%;
+            height: 40px;
+            color: white;
+            background-color: blue;
+            border: none;
+        }
+        span{
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <form id="form">
+        <center><h1>Sign up</h1></center>
+        <span>UserName:</span><br>
+        <input type="text" name="name" id="n1">
+        <p id="demo"></p>
+        <br>
+        <span>Email</span>
+        <br>
+        <input type="email" name="email" id="e1">
+        <br>
+        <span>Password</span><br>
+        <input type="password" name="pass" id="p1">
+        <p id="demo1"></p>
+        <br>
+        <span>Confirm Password</span><br>
+        <input type="password" name="pass2" id="p2">
+        <p id="demo2"></p>
+        <br>
+        <input type="button" id="btn" onclick="validate()" value="Sign Up">
+    </form>
+    </div>
+    <script>
+        function validate()
+        {
+        //     var op = /^(.+)@(.+)$/;
+        //  var num = /^[789]\d{9}$/;
+            var name = document.getElementById("n1").value;
+            var pass = document.getElementById("p1").value;
+            var pass1 = document.getElementById("p2").value;
+            
+            if(name.length>=3 && name.length<=25)
+            {
+                document.getElementById("demo").style.color="green";
+                document.getElementById("n1").style.border="1px solid green";
+                document.getElementById("demo").innerHTML="UserName is proper";
+            }
+            else
+            {
+                document.getElementById("demo").style.color="red";
+                document.getElementById("demo").innerHTML="UserName must Be Between 3 to 25 characters.";
+                document.getElementById("n1").style.border="1px solid red";
+                name.value="";
+                name.getfocus();
+            }
+            if(pass.length>8)
+            {
+                if(pass.match("!") || pass.match("@") || pass.match("#") || pass.match("$") || pass.match("%"))
+                {
+                    document.getElementById("demo1").style.color="green";
+                    document.getElementById("p1").style.border="1px solid green";
+                    document.getElementById("demo1").innerHTML="Password is strong";
+                }
+                else
+                {
+                    document.getElementById("demo1").style.color="red";
+                    document.getElementById("p1").style.border="1px solid red";
+                    document.getElementById("demo1").innerHTML="password must be at least 8 characters that include at least 1 lowercase, 1 uppercase character,1 number and 1 special character in(!@#$^&)";
+                }
+            }
+            else
+            {
+                document.getElementById("demo1").style.color="red";
+                document.getElementById("p1").style.border="1px solid red";
+                document.getElementById("demo1").innerHTML="password must be at least 8 characters that include at least 1 lowercase, 1 uppercase character,1 number and 1 special character in(!@#$^&)";
+                
+            }
+            if(pass1.match(pass))
+            {
+                document.getElementById("demo2").style.color="green";
+                document.getElementById("p2").style.border="1px solid green";
+                document.getElementById("demo2").innerHTML="Password is confirm";
+            }
+            else
+            {
+                document.getElementById("demo2").style.color="red";
+                document.getElementById("p2").style.border="1px solid red";
+                document.getElementById("demo2").innerHTML="Enter password Not Match enter again";
+                pass1.value="";
+            }
+        }
+    </script>
+</body>
+</html>

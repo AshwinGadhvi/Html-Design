@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 90%;
+            margin-top: 20px;
+            margin-left:5%;
+            margin-right: 5%;
+            height: 750px;
+        }
+        .nav{
+            height:10%;
+            top: 0;
+            border: 3px solid black;
+            display: flex;
+        }
+        .logo{
+            margin:7px 320px ;
+            width: 100%;
+        }
+        .name{
+            vertical-align: top;
+            margin-top: -45px;
+            margin-left :40px ;
+            display: flex;
+            justify-content: center;
+        }
+        .links{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background-color: gold;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(112, 77, 77);
+        }
+        .pizza{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            width: 33.33%;
+            height: 100%;
+            font-size: 30px;
+            border-right:3px solid black;
+            border-bottom: 3px solid black;
+            border-left: 3px solid black;
+        }
+        .burger{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            width: 33.33%;
+            height: 100%;
+            font-size: 30px;
+            border: 0px ;
+            border-right:3px solid black;
+            border-bottom: 3px solid black;
+        }
+        .sandwich{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            width: 33.33%;
+            height: 100%;
+            font-size: 30px;
+            border-right:3px solid black;
+            border-bottom: 3px solid black;
+        }
+        .logo img{
+            border-radius: 50px;
+        }
+        .content{
+            width: 99.67%;
+            background-color:  rgb(112, 77, 77);
+            height: 600px;
+            border-right:3px solid black;
+            border-bottom: 3px solid black;
+            border-left: 3px solid black;
+        }
+        .form{
+            width: 60%;
+            height: 80%;
+            margin-left: 20%;
+            background-color: gold;
+            border: 3px solid black;
+        }
+        .form form span{
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(112, 77, 77);
+        }
+        table{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            border: none;
+        }
+        td,th{
+            border: 1px solid black;
+        }
+        td{
+            font-size: 18px;
+        }
+        th{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #odd{
+            background-color: rgb(112, 77, 77);
+            color: gold;
+        }
+        #even{
+            color: rgb(112, 77, 77);
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav" style="background-color:rgb(112, 77, 77);">
+            <div class="logo">
+                <img src="image/logo.png" alt="no" width="50px" height="50px">
+                <div class="name">
+                    <h1 style="color: gold;">MASALA DARBAR RESTAURANT MENU</h1>
+                </div>
+            </div>
+        </div>
+        <div class="links">
+            <div class="pizza">
+                <a href="pizza.html"> PIZZA</a>
+            </div>
+            <div class="burger">
+                <a href="burger.html">BURGER</a>
+            </div>
+            <div class="sandwich">
+                <a href="sandwich.html">SANDWICH</a>
+            </div>
+        </div>
+        <div class="content">
+            <br><br><br>
+            <div class="form">
+                <table border="1" cellspacing="0">
+                    <tr id="odd">
+                        <th> Name</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr id="even">
+                        <td>Margherita pizza</td>
+                        <td id="t1">295<span>&#8377</span></td>
+                    </tr>
+                    <tr id="odd">
+                        <td>Cheezy-7 pizza</td>
+                        <td id="t1">395<span>&#8377</span></td>
+                    </tr>
+                    <tr id="even">
+                        <td>Pepper Pizza</td>
+                        <td id="t1">495<span>&#8377</span></td>
+                    </tr>
+                    <tr id="odd">
+                        <td>Veggie Pizza</td>
+                        <td id="t1">595<span>&#8377</span></td>
+                    </tr>
+                    <tr id="even">
+                        <td>Golden Corn Piza</td>
+                        <td id="t1">695<span>&#8377</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

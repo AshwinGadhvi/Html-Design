@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="op" height="400px" width="400px" style="border:1px solid black;"></canvas>
+    <button id="wahh" onclick="draw()">Click me</button>
+    <script>
+        function draw()
+        {
+
+            var cn = document.getElementById("op");
+            var ctx = cn.getContext("2d");
+            var g = ctx.createLinearGradient(0,0,100,100);
+            g.addColorStop(1,"#004CB3")
+            ctx.fillStyle = g;
+            ctx.fillRect(50,50,50,50);
+            ctx.fillText("Ashwin",200,200);
+            ctx.beginPath();
+            ctx.arc(100,60,50,0,Math.pi*2,true);
+            ctx.closePath();
+            ctx.fill();
+        }
+    </script>
+</body>
+</html>

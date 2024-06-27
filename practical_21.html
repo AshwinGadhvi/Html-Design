@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Practical 21</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="demo">
+        <h2>Click the button below</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    <script>
+        function loadDoc() {
+            $.ajax({
+                url: "demo.txt",
+                success: function(result) {
+                    $("#demo").html(result);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

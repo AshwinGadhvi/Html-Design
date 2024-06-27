@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- <form action="" method=""> -->
+        Enter Your Name     : <input type="text" name="name" id="name" placeholder="Enter Your Name "><br>
+        <p id="first"></p>
+        Enter Your Age      : <input type="number" name="age" id="age" placeholder="Enter Your Age  "><br>
+        Enter Your Email    : <input type="email" name="email" id="email" placeholder="Enter Your Email"><br>
+        Enter Your Password : <input type="password" name="pass" id="pass" placeholder="Enter Your Pass"><br>
+        Enter Your Password : <input type="password" name="pass2" id="pass2" placeholder="Enter Your Pass2"><br>
+        Enter Your Address  : <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter Your Address"></textarea>
+        <input type="submit" value="submit" onclick="validate()">
+    <!-- </form> -->
+    <script>
+        function validate()
+        {
+            var naam = document.getElementById("name").value;
+            var umar = document.getElementById("age").value;
+            var mail = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            var ssap = document.getElementById("pass2").value;
+            var jgya = document.getElementById("address").value;
+            if(naam.length>=3)
+            {
+                document.getElementById("name").style.borderColor="green";
+                document.getElementById("#first").innerHTML="name is correct";
+            }   
+            else
+            {
+                document.getElementById("name").style.borderColor="red";
+                document.getElementById("#first").innerHtml="name is false";
+
+            }
+        }
+    </script>
+</body>
+</html>

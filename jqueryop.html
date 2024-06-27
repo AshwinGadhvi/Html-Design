@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="slider">
+        <img src="image/background.jpg" />
+        <img src="image/background2.jpg" />
+        <img src="image/bg-repeat.jpg" />
+    </div>
+    <script>
+        const slider = document.getElementById("slider");
+        let id = 0;
+        const slides = slider.getElementsByTagName("img");
+        const count = slides.length;
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            id++;
+            if (id > count) {
+                id = 1;
+            }
+            slides[id - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+
+        showSlides();
+    </script>
+</body>
+
+</html>
